@@ -34,3 +34,13 @@ export interface SourceResponse {
     status: string;
     sources: Source[];
 }
+
+export interface LoaderOptions {
+    sources?: string;
+    apiKey?: string;
+}
+
+export interface GetResponse {
+    endpoint: string;
+    options?: LoaderOptions;
+}
