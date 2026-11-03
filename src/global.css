@@ -1,11 +1,28 @@
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: #17181c;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #30c5ff;
+  border-radius: 5px;
+  border: 3px solid #17181c;
+}
 body {
+    margin: 0;
+    padding: 0;
     color: #fff;
     background: #17181c;
     font-family: sans-serif;
 }
 
 header {
-    padding: 10px 30px;
+    display: flex;
+    height: 100px;
+    padding: 0 30px;
+    align-items: center;
 }
 
 header h1 {
@@ -13,11 +30,18 @@ header h1 {
     font-weight: 800;
 }
 
+main {
+  display: flex;
+  justify-content: space-between;
+  height: calc(100vh - 200px);
+}
+
 footer {
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5vw;
 }
 footer .copyright {
     font-size: 14px;
@@ -32,4 +56,48 @@ footer .copyright a:hover {
 }
 footer .copyright:before {
     content: '©';
+}
+footer .year {
+    font-size: 14px;
+    color: #444;
+}
+footer .github-logo a {
+    font-size: 14px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+footer .github-logo a:hover {
+  color: #555;
+}
+
+@media (max-width: 1020px) {
+  main {
+    flex-direction: column;
+  }
+}
+@media (max-width: 440px) {
+  header {
+    height: 80px;
+    padding: 0 20px;
+  }
+  header h1 {
+    font-size: 30px;
+    font-weight: 800;
+  }
+  footer > * {
+    margin: 0;
+    padding: 0;
+  }
+  footer {
+    margin: 0 auto;
+    height: 100px;
+    width: 300px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+  }
+  main {
+    height: calc(100vh - 180px);
+  }
 }
