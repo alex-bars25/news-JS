@@ -3,10 +3,10 @@
     flex-direction: column;
     flex-wrap: nowrap;
     width: fit-content;
-    overflow-y: auto;
+    overflow: auto;
     align-items: center;
     font: 300 1em 'Fira Sans', sans-serif;
-    padding: 0 30px;
+    padding: 0 5vw;
 }
 
 .source__item {
@@ -32,4 +32,20 @@
 .source__item-name {
     font-weight: 400;
     white-space: nowrap;
+}
+
+@media (max-width: 1020px) {
+  .sources {
+    flex-direction: row;
+    padding: 0;
+    overflow-x: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 440px) {
+  .source__item {
+    margin: 0.25em;
+    padding: 0.5em 1em;
+  }
 }

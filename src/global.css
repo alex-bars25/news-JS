@@ -1,5 +1,6 @@
 *::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 *::-webkit-scrollbar-track {
   background: #17181c;
@@ -40,7 +41,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 5vw;
 }
 footer .copyright {
     font-size: 14px;
@@ -69,4 +70,34 @@ footer .github-logo a {
 }
 footer .github-logo a:hover {
   color: #555;
+}
+
+@media (max-width: 1020px) {
+  main {
+    flex-direction: column;
+  }
+}
+@media (max-width: 440px) {
+  header {
+    height: 80px;
+    padding: 0 20px;
+  }
+  header h1 {
+    font-size: 30px;
+    font-weight: 800;
+  }
+  footer > * {
+    margin: 0;
+    padding: 0;
+  }
+  footer {
+    margin: 0 auto;
+    height: 100px;
+    width: 300px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+  }
+  main {
+    height: calc(100vh - 180px);
+  }
 }
