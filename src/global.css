@@ -18,6 +18,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 30px;
 }
 footer .copyright {
     font-size: 14px;
@@ -32,4 +33,18 @@ footer .copyright a:hover {
 }
 footer .copyright:before {
     content: '©';
+}
+footer .year {
+    font-size: 14px;
+    color: #444;
+}
+footer .github-logo a {
+    font-size: 14px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+footer .github-logo a:hover {
+  color: #555;
 }
