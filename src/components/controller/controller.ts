@@ -1,7 +1,6 @@
 import AppLoader from './appLoader';
 import { ArticleResponse, SourceResponse } from '../types/types';
 
-
 class AppController extends AppLoader {
     getSources(callback: (data?: SourceResponse) => void) {
         super.getResp(

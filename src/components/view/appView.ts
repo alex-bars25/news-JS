@@ -2,7 +2,6 @@ import News from './news/news';
 import Sources from './sources/sources';
 import { ArticleResponse, SourceResponse } from '../types/types';
 
-
 export class AppView {
     news: News;
     sources: Sources;
